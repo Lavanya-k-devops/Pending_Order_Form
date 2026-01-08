@@ -8,7 +8,7 @@ st.success("Snowflake connection OK ✅")
 st.title("🍹🍍 Pending Smoothie Orders 🍹🍍")
 st.write("***Orders that need to be filled***")
 
-session = get_active_session()
+session = cnx.session()
 
 # 1️⃣ Get unfilled orders (KEEP ORDER_UID!)
 my_dataframe = (
