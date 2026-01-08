@@ -1,8 +1,9 @@
 # Import python packages
 import streamlit as st
-from snowflake.snowpark.context import get_active_session
-from snowflake.snowpark.functions import col, when_matched
 
+from snowflake.snowpark.functions import col, when_matched
+cnx = st.connection("snowflake")
+st.success("Snowflake connection OK ✅")
 # Write directly to the app
 st.title("🍹🍍 Pending Smoothie Orders 🍹🍍")
 st.write("***Orders that need to be filled***")
